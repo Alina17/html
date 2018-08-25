@@ -1,0 +1,20 @@
+body {
+     background-color: violet;
+     text-align: center;
+     background-image: url("picture.jpg");
+     font-style: italic;
+     font-size: 30px;
+
+}
+
+button{
+    background-color: pink;
+    font-style: oblique;
+    color: black;
+
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+
+}
