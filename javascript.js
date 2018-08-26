@@ -1,23 +1,26 @@
-function validate(form){
-     var password = document.getElementById("password").value;
-
-     var isValid= true;
-     if(password!=123){
-          alert("Wrong password");
-          form.password.focus();
-          isValid= false;
-     }
-     return isValid;
-}
-var username = document.getElementById("username").value;
-
-function GetUrlValue(VarSearch){
-    var SearchString = window.location.search.substring(1);
-    var VariableArray = SearchString.split('&');
-    for(var i = 0; i < VariableArray.length; i++){
-        var KeyValuePair = VariableArray[i].split('=');
-        if(KeyValuePair[0] == VarSearch){
-            return KeyValuePair[1];
+$(document).ready(function() {
+    $('form').on('submit', function(e) {
+        list = $('form').serializeArray()
+        // password
+        if(list[1].value !== "123") {
+            e.preventDefault()
+            alert("wrong password!")
         }
+  });
+
+  document.getElementById("myText").innerHTML = "Hello: "+getUrlVars().login;
+
+});
+
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
     }
+    return vars;
 }

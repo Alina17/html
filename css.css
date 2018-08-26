@@ -1,11 +1,25 @@
 body {
-     background-color: violet;
-     text-align: center;
+     /* background-color: violet; */
+     /* text-align: center; */
      background-image: url("picture.jpg");
-     font-style: italic;
-     font-size: 30px;
-
+     /* font-style: italic;
+     font-size: 30px; */
 }
+
+.pg {
+    text-shadow: 2px 2px;
+    text-align: center;
+}
+
+.main-form {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    /* background: pink; */
+    position: relative;
+    left: 35%;
+}
+
 
 button{
     background-color: pink;
